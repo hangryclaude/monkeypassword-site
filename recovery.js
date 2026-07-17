@@ -31,8 +31,8 @@ const MODES = {
     hint: 'Drop in almost any wallet: Electrum, blockchain.info, MultiBit, MetaMask, Exodus, Ethereum keystore, Coinomi, Dogecoin/Litecoin Core… btcrecover identifies the format itself.',
   },
   lockedfile: {
-    label: 'Any locked file — ZIP · RAR · 7z · PDF · Office · SSH key · KeePass · GPG · DMG', engine: 'johnfile', file: true,
-    hint: 'Load any password-protected file. John the Ripper pulls its hash, auto-detects the format, and tries your candidate passwords across every CPU core.',
+    label: 'Any locked file or vault — ZIP · RAR · 7z · PDF · Office · SSH · GPG · DMG · KeePass · 1Password · LastPass', engine: 'johnfile', file: true,
+    hint: 'Load any password-protected file — or a KeePass .kdbx, a 1Password .opvault/.agilekeychain folder, or your LastPass data folder. It pulls the hash, auto-detects the format, and tries your candidates across every core.',
   },
   generic: {
     label: 'Any password hash (paste it) · hashcat GPU', engine: 'hashcat', hashLine: true,
