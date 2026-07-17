@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Monkeytheorem — The Password Cracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%90%92%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=EB+Garamond:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0806;--text:#efe3cc;--muted:#a8977a;--brass:#c9a24a;--brass-bright:#e7c877;
+    --f-display:"IM Fell English",Georgia,serif;--f-body:"EB Garamond",Georgia,serif;--f-type:"Special Elite",monospace}
+  *{box-sizing:border-box}html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);overflow:hidden}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:4;display:flex;justify-content:space-between;align-items:center;
+    padding:16px 22px;font-family:var(--f-type);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+  .topbar a{color:var(--brass);text-decoration:none}.topbar a:hover{color:var(--brass-bright)}
+  .topbar span{color:var(--muted)}
+  .cinema{position:fixed;inset:0;overflow:hidden;display:flex;align-items:flex-end}
+  .cinema video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .cinema-veil{position:absolute;inset:0;pointer-events:none;background:
+    radial-gradient(120% 80% at 50% 30%,transparent 40%,rgba(10,8,6,.55)),
+    linear-gradient(to top,rgba(10,8,6,.92),transparent 42%),linear-gradient(to bottom,rgba(10,8,6,.6),transparent 22%)}
+  .cinema-cap{position:relative;padding:0 26px 8vh;max-width:1100px;margin:0 auto;width:100%}
+  .cinema-cap .eyebrow{font-family:var(--f-type);font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--brass)}
+  .cinema-cap h1{font-family:var(--f-display);font-weight:400;font-size:clamp(40px,9vw,96px);line-height:.95;margin:8px 0 6px;
+    text-shadow:0 3px 30px #000}
+  .cinema-cap h1 em{font-style:italic;color:var(--brass-bright)}
+  .cinema-cap p{font-style:italic;color:var(--text);max-width:52ch;font-size:clamp(15px,2.4vw,20px);text-shadow:0 2px 16px #000}
+  .cinema-sound{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;font-family:var(--f-type);
+    font-size:14px;letter-spacing:.16em;text-transform:uppercase;background:rgba(36,29,21,.86);color:var(--brass-bright);
+    border:1px solid rgba(201,162,74,.55);padding:16px 26px;cursor:pointer;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+  .cinema-sound:hover{background:var(--brass);color:#1b1610}
+</style>
+<div class="topbar"><a href="./index.html">← The Password Cracker</a><span>Monkeytheorem</span></div>
+<section class="cinema" id="cinema" aria-label="Monkeytheorem film">
+  <video id="cinemaVid" loop playsinline preload="auto" poster="assets/monkeys/monkeythereum-poster.jpg">
+    <source src="assets/monkeys/monkeythereum.mp4" type="video/mp4">
+  </video>
+  <div class="cinema-veil"></div>
+  <button class="cinema-sound" id="cinemaSound" type="button" hidden>▶ play with sound</button>
+  <div class="cinema-cap">
+    <span class="eyebrow">Est. by the Infinite Monkey Society</span>
+    <h1>The <em>Monkeytheorem</em></h1>
+    <p>Ten thousand monkeys, ten thousand typewriters, and every secret that ever was — set to motion.</p>
+  </div>
+</section>
+<script src="./cinema.js"></script>
