@@ -205,6 +205,13 @@
     text-transform:uppercase;color:var(--faint);margin-bottom:6px}
   #toss-canvas{display:block;width:100%;height:210px}
   @media (max-width:560px){#toss-canvas{height:150px}}
+  /* candlelit act vignettes (Poe-painted scenes emerging from the dark) */
+  .act-scene{position:relative;margin:20px 0 4px;overflow:hidden}
+  .act-scene img,.act-scene video{display:block;width:100%;height:auto;opacity:.94;
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 9%,#000 88%,transparent 100%);
+            mask-image:linear-gradient(to bottom,transparent 0,#000 9%,#000 88%,transparent 100%)}
+  .act-scene figcaption{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:var(--f-type);
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-bright);text-shadow:0 2px 14px #000}
 </style>
 </head>
 <body>
@@ -256,6 +263,7 @@
       <h2>The Curator sets the swarm loose.</h2>
       <p>A dramatization. The Curator splits the work among specialist <em>agents</em> — each commanding a battalion of monkeys. Whenever a letter lands in its correct seat, it locks into brass. The honest math is in Act II.</p>
     </div>
+    <figure class="act-scene"><video autoplay muted loop playsinline poster="assets/monkeys/catch.png"><source src="assets/monkeys/catch.mp4" type="video/mp4"></video><figcaption>the agents pass a cipher hand to hand</figcaption></figure>
     <div class="target-stage">
       <div class="target-caption">Target manuscript</div>
       <div class="slots" id="slots"></div>
@@ -307,6 +315,7 @@
       <h2>It was already on a shelf.</h2>
       <p>Every string the monkeys could ever type already exists, bound and catalogued, in Borges' total library. Your password was written long before you chose it — here is where it sits.</p>
     </div>
+    <figure class="act-scene"><img src="assets/monkeys/babel.png" alt="A lone monkey with a lantern dwarfed by the infinite hexagonal Library of Babel" loading="lazy"><figcaption>every secret, already shelved</figcaption></figure>
     <div class="library-wrap">
       <div class="shelf" id="shelf" aria-hidden="true"></div>
       <div class="coords">
@@ -328,6 +337,7 @@
       <h2>Why this is not (only) a toy.</h2>
       <p>Real people have watched real fortunes sit behind a password they can almost remember. This tool exists to get your <em>own</em> coins back.</p>
     </div>
+    <figure class="act-scene"><img src="assets/monkeys/vault.png" alt="A monkey prying open a great brass vault as gold coins and glowing padlocks spill out" loading="lazy"><figcaption>the vault gives up what you locked away</figcaption></figure>
     <div class="stories">
       <div class="story"><div class="big">7,002 ₿</div><div class="who">Stefan Thomas · IronKey</div><p>Ten password guesses. He has used eight. Two remain between him and a fortune he cannot touch.</p></div>
       <div class="story"><div class="big">~8,000 ₿</div><div class="who">James Howells · a landfill</div><p>A hard drive thrown out years ago, buried under a Newport tip. He is still fighting the council for a dig.</p></div>
